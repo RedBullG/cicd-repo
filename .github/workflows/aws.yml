@@ -24,19 +24,15 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to git clone https://git-codecommit.eu-west-3.amazonaws.com/v1/repos/aws.yml
+name: Deploy to git https://git-codecommit.eu-west-3.amazonaws.com/v1/repos/aws.yml
 
 on:
   push:
     branches: [ "main" ]
 
 env:
-provider "aws" {
-  region = "ap-southeast-3"
 
-  skip_region_validation = true
-}
-  AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, eu-west-3
+  AWS_REGION: MY_AWS_REGION                   set this to your preferred AWS region, eu-west-3
   ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
   ECS_SERVICE: MY_ECS_SERVICE                 # set this to your Amazon ECS service name
   ECS_CLUSTER: MY_ECS_CLUSTER                 # set this to your Amazon ECS cluster name
