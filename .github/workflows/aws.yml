@@ -24,7 +24,7 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to eu-west-3.console.aws.amazon.com
+name: Deploy to git clone https://git-codecommit.eu-west-3.amazonaws.com/v1/repos/aws.yml
 
 on:
   push:
